@@ -31,7 +31,10 @@ In your own words, define what the responsibilities of the model layer are in
 Rails.
 
 ```md
-<!-- your answer here -->
+The model layer is the one who actually does the work.  It is a class that
+handles the dirty work of retrieving and storing data from the database. The
+model also inherits the ActiveRecord class that is actually quite powerful.
+It can recognize anonymous functions and match it to an equivalent.
 ```
 
 ## Define Controller Responsiblities
@@ -40,7 +43,9 @@ In your own words, define what the responsibilities of the controller layer are
 in Rails.
 
 ```md
-<!-- your answer here -->
+The controller is the classic boss. The controller dishes out orders without
+resentment and effectively delegates duties to the model. They are in charge
+of handling interactions such as requests and submissions.
 ```
 
 ## Define Router Responsiblities
@@ -48,7 +53,10 @@ in Rails.
 In your own words, define what the router does in Rails.
 
 ```md
-<!-- your answer here -->
+The router is the doorman it looks at http requests and determine which
+controller action is equivalent to the request.  In rails there are seven
+types of verbs while http request has 4.  Rails verb is a bit more intuitive
+and is broken out into different phases.
 ```
 
 ## The Request-Response Cycle in Rails
@@ -56,6 +64,17 @@ In your own words, define what the router does in Rails.
 Starting with a client making a GET request to a particular URL, describe how
 the parts of Rails interact to produce and send a response.
 
+[http://www.theodinproject.com/ruby-on-rails/routing](http://www.theodinproject.com/ruby-on-rails/routing)
+
 ```md
-<!-- your answer here -->
+When a client makes a GET request it is sent to the router who determines what
+kind of controller action needs to be taken. Then the class controller will take
+over and starting issuing commands to bring the information to the user. The
+controller will probably tell the model to get certain items and then display
+it on the browser.
+
+[http://gilmoursa.github.io/blog/%20Rails%20Request%20Response%20Cycle/](http://gilmoursa.github.io/blog/%20Rails%20Request%20Response%20Cycle/)
+
+
+
 ```
